@@ -789,7 +789,7 @@ abstract class ASN1
                     return $values;
                 }
             case self::TYPE_OCTET_STRING:
-                return $decoded['content'];
+                return base64_encode($decoded['content']);
             case self::TYPE_NULL:
                 return '';
             case self::TYPE_BOOLEAN:
